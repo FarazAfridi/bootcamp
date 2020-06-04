@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: 12
   
-    - uses: Borales/actions-yarn@v2.1.0
+    - uses: borales/actions-yarn@v2.0.0
       with:
         cmd: install # will run `yarn install` command
     
@@ -29,4 +29,4 @@ jobs:
       run: npm install -g surge
       
     - name: Deploy to surge
-      run: surge ./build http://bootcamp_2020_2ndassignment.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build reactapp-ts1.surge.sh --token ${{ secrets.surge_token }}
